@@ -52,7 +52,7 @@ class RoomProvider extends Component {
     return room;
   };
 
-  hadleChange = (event) => {
+  handleChange = (event) => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = event.target.name;
@@ -103,7 +103,7 @@ class RoomProvider extends Component {
         value={{
           ...this.state,
           getRoom: this.getRoom,
-          handleChange: this.hadleChange,
+          handleChange: this.handleChange,
         }}
       >
         {this.props.children}
